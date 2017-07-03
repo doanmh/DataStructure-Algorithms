@@ -6,6 +6,8 @@ package ctci.chapter01.question01;
  * Implementation using check array
  * 
  * Time Complexity: O(n) - Space Complexity: O(1)
+ * 
+ * Assumption: The characters are ASCII characters and the input is valid
  *
  */
 public class Ch01_Q01_isUnique {

@@ -1,5 +1,16 @@
 package ctci.chapter01.question02;
 
+/**
+ * 
+ * @author Minh Doan
+ * Implementation using frequency array
+ * 
+ * Time Complexity: O(n) - Space Complexity: O(n)
+ * 
+ * Assumption: The characters are ASCII characters and the input is valid
+ *
+ */
+
 public class Ch01_Q02_checkPermutation {
 	public static boolean checkPermutation(String str1, String str2) {
 		if (str1.length() != str2.length()) {
