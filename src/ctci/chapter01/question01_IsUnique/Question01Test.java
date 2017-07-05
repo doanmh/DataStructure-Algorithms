@@ -1,4 +1,4 @@
-package ctci.chapter01.question01;
+package ctci.chapter01.question01_IsUnique;
 
 import static org.junit.Assert.*;
 
@@ -13,19 +13,19 @@ public class Question01Test {
 	public void testLength() {
 		SecureRandom random = new SecureRandom();
 		String randomString = new BigInteger(512, random).toString(256);
-		assertFalse(Ch01_Q01_isUnique.isUnique(randomString));
+		assertFalse(Question01Answer.isUnique(randomString));
 	}
 	
 	@Test
 	public void testNonUnique() {
 		String testStr = "abcdefghii";
-		assertFalse(Ch01_Q01_isUnique.isUnique(testStr));
+		assertFalse(Question01Answer.isUnique(testStr));
 	}
 	
 	@Test
 	public void testUnique() {
 		String testStr = "abcdefghi";
-		assertTrue(Ch01_Q01_isUnique.isUnique(testStr));
+		assertTrue(Question01Answer.isUnique(testStr));
 	}
 
 }

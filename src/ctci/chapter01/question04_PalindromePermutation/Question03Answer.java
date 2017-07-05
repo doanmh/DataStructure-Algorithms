@@ -1,4 +1,4 @@
-package ctci.chapter01.question04;
+package ctci.chapter01.question04_PalindromePermutation;
 
 /**
  * 
@@ -12,7 +12,7 @@ package ctci.chapter01.question04;
  * and the input is always valid
  *
  */
-public class Ch01_Q04_PalindromePermutation {
+public class Question03Answer {
 	public static int getCharIndex(char x) {
 		if (x < 'a' || x > 'z') {
 			return -1;

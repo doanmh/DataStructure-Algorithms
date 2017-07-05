@@ -1,4 +1,4 @@
-package ctci.chapter01.question02;
+package ctci.chapter01.question02_CheckPermutation;
 
 /**
  * 
@@ -11,7 +11,7 @@ package ctci.chapter01.question02;
  *
  */
 
-public class Ch01_Q02_checkPermutation {
+public class Question02Answer {
 	public static boolean checkPermutation(String str1, String str2) {
 		if (str1.length() != str2.length()) {
 			return false;	

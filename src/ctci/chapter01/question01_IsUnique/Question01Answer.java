@@ -1,4 +1,4 @@
-package ctci.chapter01.question01;
+package ctci.chapter01.question01_IsUnique;
 
 /**
  * 
@@ -10,7 +10,7 @@ package ctci.chapter01.question01;
  * Assumption: The characters are ASCII characters and the input is valid
  *
  */
-public class Ch01_Q01_isUnique {
+public class Question01Answer {
 	public static boolean isUnique(String str) {
 		if (str.length() > 128) {
 			return false;
