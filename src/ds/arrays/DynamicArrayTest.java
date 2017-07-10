@@ -51,6 +51,18 @@ public class DynamicArrayTest {
 		assertTrue(testArray.at(2) == 3);
 		assertTrue(testArray.at(3) == 2);
 		assertTrue(testArray.at(5) == 4);
+		testArray.insert(6, 100);
+		assertEquals(testArray.size(), 7);
+	}
+	
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testInsert1() {
+		DynamicArray<Integer> testArray = new DynamicArray<Integer>();
+		for (int i = 0; i < 5; i++) {
+			testArray.push(i);
+		}
+		testArray.insert(-1, 100);
+		testArray.insert(6,	100);
 	}
 	
 	@Test
@@ -95,6 +107,15 @@ public class DynamicArrayTest {
 		assertEquals(testArray.size(), 7);
 		assertEquals(testArray.capacity(), 16);
 		assertTrue(testArray.at(3) == 3);
+	}
+	
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testDelete2() {
+		DynamicArray<Integer> testArray = new DynamicArray<Integer>();
+		for (int i = 0; i < 31; i++) {
+			testArray.push(i);
+		}
+		testArray.delete(31);
 	}
 	
 	@Test

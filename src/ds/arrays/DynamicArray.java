@@ -36,7 +36,9 @@ public class DynamicArray<T> {
 	
 	@SuppressWarnings("unchecked")
 	public T at(int index) {
-		checkIndex(index);
+		if (index < 0 || index >= size) {
+			throw new IndexOutOfBoundsException("Index is either less than 0 or great ther than size: " + this.size);
+		}
 		return (T)elementList[index];
 	}
 	
@@ -47,7 +49,9 @@ public class DynamicArray<T> {
 	}
 	
 	public void insert(int index, T item) {
-		checkIndex(index);
+		if (index < 0 || index > size) {
+			throw new IndexOutOfBoundsException("Index is either less than 0 or great ther than size: " + this.size);
+		}
 		checkForResize(size+1);
 		System.arraycopy(elementList, index, elementList, index + 1, size - index);
 		elementList[index] = item;
@@ -71,7 +75,9 @@ public class DynamicArray<T> {
 	}
 	
 	public void delete(int index) {
-		checkIndex(index);
+		if (index < 0 || index >= size) {
+			throw new IndexOutOfBoundsException("Index is either less than 0 or great ther than size: " + this.size);
+		}
 		if (index == size-1) {
 			pop();
 			return;
@@ -123,11 +129,5 @@ public class DynamicArray<T> {
 	private void resize(int newCapacity) {
 		capacity = newCapacity;
 		elementList = Arrays.copyOf(elementList, newCapacity);
-	}
-	
-	private void checkIndex(int index) {
-		if (index < 0 || index > size) {
-			throw new IndexOutOfBoundsException("Index is either less than 0 or great ther than size: " + this.size);
-		}
 	}
 }
