@@ -22,6 +22,10 @@ public class LinkedListQueue<T> {
 		return (T) queue.pop_front();
 	}
 	
+	public T peek() {
+		return (T) queue.front();
+	}
+	
 	public boolean empty() {
 		return queue.isEmpty();
 	}
